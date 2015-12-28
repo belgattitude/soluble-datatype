@@ -1,0 +1,29 @@
+{
+    "name": "soluble/datatype",
+    "description": "Common data types for data abstraction",
+    "license": "MIT",
+    "keywords": [
+        "database",
+        "datatype"
+    ],
+    "homepage": "https://github.com/belgattitude/soluble-datatype",
+    "type": "library",
+    "authors": [
+        {
+            "name": "Sébastien Vanvelthem",
+            "homepage": "http://www.nuvolia.com/",
+            "role": "Lead developer"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Soluble\\Datatype\\": "src/Soluble/Datatype"
+        }
+    },
+    "require": {
+        "php": ">=5.4.4"
+    },
+    "archive": {
+        "exclude": ["test", "doc", ".travis.yml", ".codeclimate.yml", ".coveralls.yml", ".scrutinizer.yml", ".php_cs", ".gitignore"]
+    }
+}
