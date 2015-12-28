@@ -1,10 +1,10 @@
 # Soluble\Datatype
 
 [![PHP Version](http://img.shields.io/badge/php-5.4+-ff69b4.svg)](https://packagist.org/packages/soluble/datatype)
-[![HHVM Status](http://hhvm.h4cc.de/badge/soluble/datatype.png?style=flat)](http://hhvm.h4cc.de/package/soluble/datatype)
+[![HHVM Status](http://hhvm.h4cc.de/badge/soluble/datatype.svg)](http://hhvm.h4cc.de/package/soluble/datatype)
 [![Build Status](https://travis-ci.org/belgattitude/soluble-datatype.png?branch=master)](https://travis-ci.org/belgattitude/soluble-datatype)
 [![Code Coverage](https://scrutinizer-ci.com/g/belgattitude/soluble-datatype/badges/coverage.png?s=aaa552f6313a3a50145f0e87b252c84677c22aa9)](https://scrutinizer-ci.com/g/belgattitude/soluble-datatype/)
-[![Scrutinizer Quality Score](https://scrutinizer-ci.com/g/belgattitude/soluble-datatype/badges/quality-score.png?s=6f3ab91f916bf642f248e82c29857f94cb50bb33)](https://scrutinizer-ci.com/g/belgattitude/soluble-datatype/)
+[![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/belgattitude/soluble-datatype/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/belgattitude/soluble-datatype/?branch=master)
 [![Latest Stable Version](https://poser.pugx.org/soluble/datatype/v/stable.svg)](https://packagist.org/packages/soluble/datatype)
 [![License](https://poser.pugx.org/soluble/datatype/license.png)](https://packagist.org/packages/soluble/datatype)
 
