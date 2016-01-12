@@ -38,6 +38,60 @@ Most modern frameworks will include Composer out of the box, but ensure the foll
 require 'vendor/autoload.php';
 ```
 
+## API
+
+### AbstractColumnDefinition
+
+Metadata information is stored as an `Soluble\Datatype\Column\Definition\AbstractColumnDefinition` object on which :
+
+
+| General methods              | Return        | Description                                         |
+|------------------------------|---------------|-----------------------------------------------------|
+| `getName()`                  | `string`      | Return column name (unaliased)                      |
+| `getAlias()`                 | `string`      | Return column alias                                 |
+| `getTableName()`             | `string`      | Return origin table                                 |
+| `getSchemaName()`            | `string`      | Originating schema for the column/table             |
+
+| Type related methods         | Return        | Description                                         |
+|------------------------------|---------------|-----------------------------------------------------|
+| `getDataType()`              | `string`      | Column datatype (see Column\Type)                   |
+| `getNativeDataType()`        | `string`      | Return native datatype                              |
+| `isText()`                   | `boolean`     | Whether the column is textual (string, blog...)     |
+| `isNumeric()`                | `boolean`     | Whether the column is numeric (decimal, int...)     |
+| `isDate()`                   | `boolean`     | Is a date type                                      |
+
+| Extra information methods    | Return        | Description                                         |
+|------------------------------|---------------|-----------------------------------------------------|
+| `isComputed()`               | `boolean`     | Whether the column is computed, i.e. '1+1, sum()    |
+| `isGroup()`                  | `boolean`     | Grouped operation sum(), min(), max()               |
+
+
+| Source infos                 | Return        | Description                                         |
+|------------------------------|---------------|-----------------------------------------------------|
+| `isPrimary()`                | `boolean`     | Whether the column is (part of) primary key         |
+| `isNullable()`               | `boolean`     | Whether the column is nullable                      |
+| `getColumnDefault()`         | `string`      | Return default value for column                     |
+| `getOrdinalPosition()`       | `integer`     | Return position in the select                       |
+
+
+### Implementation od `AbstractColumnDefinition`
+
+Concrete implementations of `Soluble\Datatype\Column\Definition\AbstractColumnDefinition` are
+
+| Drivers              | Interface                 | Description                   |
+|----------------------|---------------------------|-------------------------------|
+| `BitColumn`          |                           |                               |
+| `BlobColumn`         |                           |                               |
+| `BooleanColumn`      |                           |                               |
+| `DateColumn`         | `DateColumnInterface`     |                               |
+| `DateTimeColumn`     | `DatetimeColumnInterface` |                               |
+| `DecimalColumn`      | `NumericColumnInterface`  |                               |
+| `FloatColumn`        | `NumericColumnInterface`  |                               |
+| `GeometryColumn`     |                           |                               |
+| `IntegerColumn`      | `NumericColumnInterface`  |                               |
+| `StringColumn`       | `TextColumnInterface`     |                               |
+| `TimeColumn`         |                           |                               |
+
 
 ## Coding standards
 
