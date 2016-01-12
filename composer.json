@@ -6,12 +6,12 @@
         "database",
         "datatype"
     ],
-    "homepage": "https://github.com/belgattitude/soluble-datatype",
+    "homepage": "http://soluble.io",
     "type": "library",
     "authors": [
         {
             "name": "Sébastien Vanvelthem",
-            "homepage": "http://www.nuvolia.com/",
+            "homepage": "https://github.com/belgattitude",
             "role": "Lead developer"
         }
     ],
