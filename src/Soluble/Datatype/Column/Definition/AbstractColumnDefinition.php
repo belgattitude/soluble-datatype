@@ -358,7 +358,9 @@ abstract class AbstractColumnDefinition
     }
 
     /**
-     * @return bool $isGroup
+     * Whether the column originates from a sql group function
+     *
+     * @return bool
      */
     public function isGroup()
     {
