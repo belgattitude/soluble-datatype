@@ -424,7 +424,7 @@ abstract class AbstractColumnDefinition
     public function toArray()
     {
         $reflectionClass = new \ReflectionClass(get_class($this));
-        $array = array();
+        $array = [];
         foreach ($reflectionClass->getProperties() as $property) {
             if ($property->isProtected()) {
                 $property->setAccessible(true);

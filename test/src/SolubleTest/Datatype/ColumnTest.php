@@ -52,6 +52,10 @@ class ColumnTest extends \PHPUnit_Framework_TestCase
         $coldef->setCharacterOctetLength(10);
         $this->assertEquals(10, $coldef->getCharacterOctetLength());
 
+
+        $coldef = Column::createColumnDefinition(Column::TYPE_NULL, 'flag_test_null');
+        $this->assertInstanceOf('Soluble\Datatype\Column\Definition\AbstractColumnDefinition', $coldef);
+
         $coldef = Column::createColumnDefinition(Column::TYPE_DECIMAL, 'flag_test');
         $this->assertInstanceOf('Soluble\Datatype\Column\Definition\AbstractColumnDefinition', $coldef);
         $this->assertInstanceOf('Soluble\Datatype\Column\Definition\DecimalColumn', $coldef);

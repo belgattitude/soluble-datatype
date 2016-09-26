@@ -7,7 +7,6 @@ use Soluble\Datatype\Column\Definition\AbstractColumnDefinition;
 
 class Type
 {
-
     const TYPE_INTEGER = 'integer';
     const TYPE_DECIMAL = 'decimal';
     const TYPE_STRING = 'string';
@@ -19,11 +18,12 @@ class Type
     const TYPE_FLOAT = 'float';
     const TYPE_BIT = 'bit';
     const TYPE_SPATIAL_GEOMETRY = 'geometry';
+    const TYPE_NULL = 'null';
 
     /**
      * @var array
      */
-    protected static $typesMap = array(
+    protected static $typesMap = [
         self::TYPE_INTEGER => 'Definition\IntegerColumn',
         self::TYPE_DECIMAL => 'Definition\DecimalColumn',
         self::TYPE_STRING => 'Definition\StringColumn',
@@ -35,7 +35,8 @@ class Type
         self::TYPE_FLOAT => 'Definition\FloatColumn',
         self::TYPE_BIT => 'Definition\BitColumn',
         self::TYPE_SPATIAL_GEOMETRY => 'Definition\GeometryColumn',
-    );
+        self::TYPE_NULL => 'Definition\NullColumn'
+    ];
 
     /**
      *

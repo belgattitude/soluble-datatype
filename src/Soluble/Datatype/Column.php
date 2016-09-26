@@ -1,7 +1,6 @@
 <?php
 namespace Soluble\Datatype;
 
-use Soluble\Datatype\Exception;
 use Soluble\Datatype\Column\Definition;
 
 class Column
@@ -17,11 +16,12 @@ class Column
     const TYPE_FLOAT    = 'float';
     const TYPE_BIT      = 'bit';
     const TYPE_SPATIAL_GEOMETRY = 'geometry';
+    const TYPE_NULL = 'null';
 
     /**
      * @var array
      */
-    protected static $typesMap = array(
+    protected static $typesMap = [
 
         self::TYPE_INTEGER  => 'Definition\IntegerColumn',
         self::TYPE_DECIMAL  => 'Definition\DecimalColumn',
@@ -34,7 +34,8 @@ class Column
         self::TYPE_FLOAT    => 'Definition\FloatColumn',
         self::TYPE_BIT      => 'Definition\BitColumn',
         self::TYPE_SPATIAL_GEOMETRY  => 'Definition\GeometryColumn',
-    );
+        self::TYPE_NULL  => 'Definition\NullColumn',
+    ];
 
 
 
