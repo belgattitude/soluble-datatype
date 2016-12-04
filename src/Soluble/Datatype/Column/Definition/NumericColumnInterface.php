@@ -1,4 +1,5 @@
 <?php
+
 namespace Soluble\Datatype\Column\Definition;
 
 interface NumericColumnInterface
@@ -9,10 +10,9 @@ interface NumericColumnInterface
     public function getNumericUnsigned();
 
     /**
-     * @param  bool $numericUnsigned
+     * @param bool $numericUnsigned
      */
     public function setNumericUnsigned($numericUnsigned);
-
 
     /**
      * @return bool

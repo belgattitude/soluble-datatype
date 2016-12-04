@@ -9,14 +9,12 @@ use Soluble\Datatype\Column\Type;
  */
 class TypeTest extends \PHPUnit_Framework_TestCase
 {
-
     /**
      * Sets up the fixture, for example, opens a network connection.
      * This method is called before a test is executed.
      */
     protected function setUp()
     {
-
     }
 
     public function testGetSupportedTypes()
@@ -37,7 +35,6 @@ class TypeTest extends \PHPUnit_Framework_TestCase
 
     public function testCreateColumnDefinitionThrowsException()
     {
-
         $this->setExpectedException('Soluble\Datatype\Exception\UnsupportedTypeException');
         $columnDef = Type::createColumnDefinition('invalid_type', 'flag_one');
     }

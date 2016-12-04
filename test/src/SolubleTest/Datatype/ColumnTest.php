@@ -9,7 +9,6 @@ use Soluble\Datatype\Column;
  */
 class ColumnTest extends \PHPUnit_Framework_TestCase
 {
-
     /**
      * @var Column
      */
@@ -21,7 +20,6 @@ class ColumnTest extends \PHPUnit_Framework_TestCase
      */
     protected function setUp()
     {
-
     }
 
     public function testCreateColumnDefinitionThrowsUnsupportedDatatypeException()
@@ -45,13 +43,11 @@ class ColumnTest extends \PHPUnit_Framework_TestCase
         $this->assertInstanceOf('Soluble\Datatype\Column\Definition\AbstractColumnDefinition', $coldef);
         $this->assertInstanceOf('Soluble\Datatype\Column\Definition\BitColumn', $coldef);
 
-
         $coldef = Column::createColumnDefinition(Column::TYPE_BLOB, 'flag_test');
         $this->assertInstanceOf('Soluble\Datatype\Column\Definition\AbstractColumnDefinition', $coldef);
         $this->assertInstanceOf('Soluble\Datatype\Column\Definition\BlobColumn', $coldef);
         $coldef->setCharacterOctetLength(10);
         $this->assertEquals(10, $coldef->getCharacterOctetLength());
-
 
         $coldef = Column::createColumnDefinition(Column::TYPE_NULL, 'flag_test_null');
         $this->assertInstanceOf('Soluble\Datatype\Column\Definition\AbstractColumnDefinition', $coldef);
@@ -82,7 +78,6 @@ class ColumnTest extends \PHPUnit_Framework_TestCase
         $coldef->setIsAutoIncrement(true);
         $this->assertTrue($coldef->isAutoIncrement());
 
-
         $coldef = Column::createColumnDefinition(Column::TYPE_STRING, 'flag_test');
         $this->assertInstanceOf('Soluble\Datatype\Column\Definition\AbstractColumnDefinition', $coldef);
         $this->assertInstanceOf('Soluble\Datatype\Column\Definition\StringColumn', $coldef);
@@ -92,7 +87,6 @@ class ColumnTest extends \PHPUnit_Framework_TestCase
 
     public function testAbstractColumnDefinition()
     {
-
         $def = Column::createColumnDefinition(Column::TYPE_STRING, 'column_name', 'table_name');
         $this->assertInstanceOf('Soluble\Datatype\Column\Definition\AbstractColumnDefinition', $def);
         $this->assertEquals('column_name', $def->getName());
@@ -119,7 +113,6 @@ class ColumnTest extends \PHPUnit_Framework_TestCase
         $this->assertFalse($def->isNullable());
         $def->setIsNullable(true);
         $this->assertTrue($def->isNullable());
-
 
         $def->setColumnDefault('def');
         $this->assertEquals('def', $def->getColumnDefault());

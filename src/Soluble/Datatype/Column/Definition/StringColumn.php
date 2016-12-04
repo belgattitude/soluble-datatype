@@ -1,10 +1,10 @@
 <?php
+
 namespace Soluble\Datatype\Column\Definition;
 
 class StringColumn extends AbstractColumnDefinition implements TextColumnInterface
 {
     /**
-     *
      * @var int
      */
     protected $characterMaximumLength = null;
@@ -19,11 +19,13 @@ class StringColumn extends AbstractColumnDefinition implements TextColumnInterfa
 
     /**
      * @param int $characterMaximumLength the $characterMaximumLength to set
+     *
      * @return StringColumn
      */
     public function setCharacterMaximumLength($characterMaximumLength)
     {
         $this->characterMaximumLength = $characterMaximumLength;
+
         return $this;
     }
 }

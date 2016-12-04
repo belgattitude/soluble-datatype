@@ -39,12 +39,13 @@ class Type
     ];
 
     /**
-     *
      * @param string $datatype
      * @param string $name
      * @param string $tableName
      * @param string $schemaName
+     *
      * @throws Exception\UnsupportedDatatypeException
+     *
      * @return AbstractColumnDefinition
      */
     public static function createColumnDefinition($datatype, $name, $tableName = null, $schemaName = null)
@@ -58,7 +59,7 @@ class Type
     }
 
     /**
-     * Return all supported types
+     * Return all supported types.
      *
      * @return array
      */

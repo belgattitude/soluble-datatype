@@ -5,48 +5,39 @@ namespace Soluble\Datatype\Column\Definition;
 abstract class AbstractColumnDefinition
 {
     /**
-     *
      * @var string
      */
     protected $name = null;
 
     /**
-     *
      * @var string
      */
     protected $tableName = null;
 
     /**
-     *
      * @var string
      */
     protected $schemaName = null;
 
     /**
-     *
      * @var
      */
     protected $ordinalPosition = null;
 
     /**
-     *
      * @var string
      */
     protected $columnDefault = null;
 
-
     /**
-     *
      * @var string
      */
     protected $dataType = null;
 
     /**
-     *
      * @var string
      */
     protected $nativeDataType = null;
-
 
     /**
      * @var string
@@ -64,28 +55,22 @@ abstract class AbstractColumnDefinition
     protected $catalog;
 
     /**
-     *
-     * @var boolean
+     * @var bool
      */
     protected $isPrimary = false;
 
     /**
-     *
      * @var bool
      */
     protected $isNullable = false;
 
     /**
-     *
-     * @var boolean
+     * @var bool
      */
     protected $isGroup = false;
 
-
-
-
     /**
-     * Constructor
+     * Constructor.
      *
      * @param string $name
      * @param string $tableName
@@ -99,19 +84,21 @@ abstract class AbstractColumnDefinition
     }
 
     /**
-     * Set name
+     * Set name.
      *
      * @param string $name
+     *
      * @return AbstractColumnDefinition
      */
     public function setName($name)
     {
         $this->name = $name;
+
         return $this;
     }
 
     /**
-     * Get name
+     * Get name.
      *
      * @return string
      */
@@ -121,7 +108,7 @@ abstract class AbstractColumnDefinition
     }
 
     /**
-     * Get table name
+     * Get table name.
      *
      * @return string
      */
@@ -131,9 +118,10 @@ abstract class AbstractColumnDefinition
     }
 
     /**
-     * Set table name
+     * Set table name.
      *
      * @param string $tableName
+     *
      * @return AbstractColumnDefinition
      */
     public function setTableName($tableName)
@@ -142,13 +130,15 @@ abstract class AbstractColumnDefinition
             $tableName = null;
         }
         $this->tableName = $tableName;
+
         return $this;
     }
 
     /**
-     * Set schema name
+     * Set schema name.
      *
      * @param string $schemaName
+     *
      * @return AbstractColumnDefinition
      */
     public function setSchemaName($schemaName)
@@ -157,11 +147,12 @@ abstract class AbstractColumnDefinition
             $schemaName = null;
         }
         $this->schemaName = $schemaName;
+
         return $this;
     }
 
     /**
-     * Get schema name
+     * Get schema name.
      *
      * @return string
      */
@@ -180,11 +171,13 @@ abstract class AbstractColumnDefinition
 
     /**
      * @param int $ordinalPosition to set
+     *
      * @return AbstractColumnDefinition
      */
     public function setOrdinalPosition($ordinalPosition)
     {
         $this->ordinalPosition = $ordinalPosition;
+
         return $this;
     }
 
@@ -198,22 +191,25 @@ abstract class AbstractColumnDefinition
 
     /**
      * @param string $columnDefault to set
+     *
      * @return AbstractColumnDefinition
      */
     public function setColumnDefault($columnDefault)
     {
         $this->columnDefault = $columnDefault;
+
         return $this;
     }
 
-
     /**
      * @param bool $isNullable to set
+     *
      * @return AbstractColumnDefinition
      */
     public function setIsNullable($isNullable)
     {
         $this->isNullable = $isNullable;
+
         return $this;
     }
 
@@ -225,14 +221,15 @@ abstract class AbstractColumnDefinition
         return $this->isNullable;
     }
 
-
     /**
      * @param bool $isPrimary to set
+     *
      * @return AbstractColumnDefinition
      */
     public function setIsPrimary($isPrimary)
     {
         $this->isPrimary = $isPrimary;
+
         return $this;
     }
 
@@ -254,14 +251,15 @@ abstract class AbstractColumnDefinition
 
     /**
      * @param string $dataType the $dataType to set
+     *
      * @return AbstractColumnDefinition
      */
     public function setDataType($dataType)
     {
         $this->dataType = $dataType;
+
         return $this;
     }
-
 
     /**
      * @return null|string the $nativeDataType
@@ -271,27 +269,27 @@ abstract class AbstractColumnDefinition
         return $this->nativeDataType;
     }
 
-
-
     /**
      * @param string $nativeDataType the $dataType to set
+     *
      * @return AbstractColumnDefinition
      */
     public function setNativeDataType($nativeDataType)
     {
         $this->nativeDataType = $nativeDataType;
+
         return $this;
     }
 
-
     /**
-     *
      * @param string $alias column alias name
+     *
      * @return AbstractColumnDefinition
      */
     public function setAlias($alias)
     {
         $this->alias = $alias;
+
         return $this;
     }
 
@@ -304,8 +302,8 @@ abstract class AbstractColumnDefinition
     }
 
     /**
-     *
      * @param string $tableAlias table alias name
+     *
      * @return AbstractColumnDefinition
      */
     public function setTableAlias($tableAlias)
@@ -314,11 +312,11 @@ abstract class AbstractColumnDefinition
             $tableAlias = null;
         }
         $this->tableAlias = $tableAlias;
+
         return $this;
     }
 
     /**
-     *
      * @return string table alias
      */
     public function getTableAlias()
@@ -327,13 +325,14 @@ abstract class AbstractColumnDefinition
     }
 
     /**
-     *
      * @param string $catalog db catalog
+     *
      * @return AbstractColumnDefinition
      */
     public function setCatalog($catalog)
     {
         $this->catalog = $catalog;
+
         return $this;
     }
 
@@ -345,20 +344,20 @@ abstract class AbstractColumnDefinition
         return $this->catalog;
     }
 
-
-
     /**
      * @param bool $isGroup when the column is grouped
+     *
      * @return AbstractColumnDefinition
      */
     public function setIsGroup($isGroup)
     {
         $this->isGroup = $isGroup;
+
         return $this;
     }
 
     /**
-     * Whether the column originates from a sql group function
+     * Whether the column originates from a sql group function.
      *
      * @return bool
      */
@@ -367,58 +366,57 @@ abstract class AbstractColumnDefinition
         return $this->isGroup;
     }
 
-
     /**
-     * @return boolean
+     * @return bool
      */
     public function isComputed()
     {
-        return ($this->tableName == '');
+        return $this->tableName == '';
     }
 
-
     /**
-     * Tells whether the column is numeric
+     * Tells whether the column is numeric.
      *
-     * @return boolean
+     * @return bool
      */
     public function isNumeric()
     {
-        return ($this instanceof NumericColumnInterface);
+        return $this instanceof NumericColumnInterface;
     }
 
     /**
-     * Tells whether the column is textual
+     * Tells whether the column is textual.
      *
-     * @return boolean
+     * @return bool
      */
     public function isText()
     {
-        return ($this instanceof TextColumnInterface);
+        return $this instanceof TextColumnInterface;
     }
 
     /**
-     * Tells whether the column is a date
+     * Tells whether the column is a date.
      *
-     * @return boolean
+     * @return bool
      */
     public function isDate()
     {
-        return ($this instanceof DateColumnInterface);
+        return $this instanceof DateColumnInterface;
     }
 
     /**
-     * Tells whether the column is a timestamp
+     * Tells whether the column is a timestamp.
      *
-     * @return boolean
+     * @return bool
      */
     public function isDatetime()
     {
-        return ($this instanceof DatetimeColumnInterface);
+        return $this instanceof DatetimeColumnInterface;
     }
 
     /**
-     * Return an array version of the column definition
+     * Return an array version of the column definition.
+     *
      * @return array
      */
     public function toArray()
@@ -432,6 +430,7 @@ abstract class AbstractColumnDefinition
                 $property->setAccessible(false);
             }
         }
+
         return $array;
     }
 }

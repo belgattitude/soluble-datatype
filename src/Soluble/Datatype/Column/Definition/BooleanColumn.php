@@ -1,4 +1,5 @@
 <?php
+
 namespace Soluble\Datatype\Column\Definition;
 
 class BooleanColumn extends AbstractColumnDefinition implements NumericColumnInterface
@@ -13,15 +14,16 @@ class BooleanColumn extends AbstractColumnDefinition implements NumericColumnInt
 
     /**
      * @param bool $numericUnsigned
+     *
      * @return BooleanColumn
      */
     public function setNumericUnsigned($numericUnsigned)
     {
         // do nothing
         $numericUnsigned = false;
+
         return $this;
     }
-
 
     /**
      * @return bool

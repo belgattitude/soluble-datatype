@@ -5,24 +5,19 @@ namespace Soluble\Datatype\Column\Definition;
 class DecimalColumn extends AbstractColumnDefinition implements NumericColumnInterface
 {
     /**
-     *
      * @var int
      */
     protected $numericPrecision = null;
 
     /**
-     *
      * @var int
      */
     protected $numericScale = null;
 
-
     /**
-     *
-     * @var boolean
+     * @var bool
      */
     protected $numericUnsigned = null;
-
 
     /**
      * @return bool
@@ -33,15 +28,16 @@ class DecimalColumn extends AbstractColumnDefinition implements NumericColumnInt
     }
 
     /**
-     * @param  bool $numericUnsigned
+     * @param bool $numericUnsigned
+     *
      * @return DecimalColumn
      */
     public function setNumericUnsigned($numericUnsigned)
     {
         $this->numericUnsigned = $numericUnsigned;
+
         return $this;
     }
-
 
     /**
      * @return bool
@@ -68,11 +64,13 @@ class DecimalColumn extends AbstractColumnDefinition implements NumericColumnInt
 
     /**
      * @param int $numericPrecision the $numericPrevision to set
+     *
      * @return DecimalColumn
      */
     public function setNumericPrecision($numericPrecision)
     {
         $this->numericPrecision = $numericPrecision;
+
         return $this;
     }
 
@@ -84,7 +82,7 @@ class DecimalColumn extends AbstractColumnDefinition implements NumericColumnInt
      * with five digits and two decimals, so values that can be stored in
      * the salary column range from -999.99 to 999.99.
      *
-     * @return integer the $numericScale
+     * @return int the $numericScale
      */
     public function getNumericScale()
     {
@@ -92,12 +90,14 @@ class DecimalColumn extends AbstractColumnDefinition implements NumericColumnInt
     }
 
     /**
-     * @param integer $numericScale the $numericScale to set
+     * @param int $numericScale the $numericScale to set
+     *
      * @return DecimalColumn
      */
     public function setNumericScale($numericScale)
     {
         $this->numericScale = $numericScale;
+
         return $this;
     }
 }

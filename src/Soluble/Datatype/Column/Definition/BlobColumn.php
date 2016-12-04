@@ -1,10 +1,10 @@
 <?php
+
 namespace Soluble\Datatype\Column\Definition;
 
 class BlobColumn extends AbstractColumnDefinition
 {
     /**
-     *
      * @var int
      */
     protected $characterOctetLength = null;
@@ -19,11 +19,13 @@ class BlobColumn extends AbstractColumnDefinition
 
     /**
      * @param int $characterOctetLength the $characterOctetLength to set
+     *
      * @return BlobColumn
      */
     public function setCharacterOctetLength($characterOctetLength)
     {
         $this->characterOctetLength = $characterOctetLength;
+
         return $this;
     }
 }

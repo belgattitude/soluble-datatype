@@ -1,16 +1,15 @@
 <?php
+
 namespace Soluble\Datatype\Column\Definition;
 
 class IntegerColumn extends AbstractColumnDefinition implements NumericColumnInterface
 {
     /**
-     *
      * @var bool
      */
     protected $numericUnsigned = null;
 
     /**
-     *
      * @var bool
      */
     protected $isAutoIncrement;
@@ -24,15 +23,16 @@ class IntegerColumn extends AbstractColumnDefinition implements NumericColumnInt
     }
 
     /**
-     * @param  bool $numericUnsigned
+     * @param bool $numericUnsigned
+     *
      * @return IntegerColumn
      */
     public function setNumericUnsigned($numericUnsigned)
     {
         $this->numericUnsigned = $numericUnsigned;
+
         return $this;
     }
-
 
     /**
      * @return bool
@@ -42,14 +42,15 @@ class IntegerColumn extends AbstractColumnDefinition implements NumericColumnInt
         return $this->numericUnsigned;
     }
 
-
     /**
      * @param bool $isAutoIncrement to set
+     *
      * @return IntegerColumn
      */
     public function setIsAutoIncrement($isAutoIncrement)
     {
         $this->isAutoIncrement = $isAutoIncrement;
+
         return $this;
     }
 
